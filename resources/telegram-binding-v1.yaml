@@ -1,0 +1,32 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: telegram-source-binding
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: telegram-source
+    properties:
+      authorizationToken: 6177353497:AAH542SrGiSZyZZ6j1iHjoP8FPQ4frK6yxg
+  steps:
+  - ref:
+      apiVersion: camel.apache.org/v1alpha1
+      kind: Kamelet
+      name: insert-header-action
+    properties:
+      name:  CamelCloudEventSource
+      value: org.apache.camel.event.telegram
+  - ref:
+      apiVersion: camel.apache.org/v1alpha1
+      kind: Kamelet
+      name: insert-header-action
+    properties:
+      name:  CamelCloudEventType
+      value: telegram.source
+  sink:
+    ref:
+      kind: Broker
+      apiVersion: eventing.knative.dev/v1
+      name: default

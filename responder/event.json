@@ -1,0 +1,10 @@
+{
+  "id": "3eb9b9c8-3f0a-4324-83aa-184c7ceff7b0",
+  "time": "2023-02-22T19:41:22.025Z",
+  "type": "knative.function.translation",
+  "source": "ksvc:translate",
+  "specversion": "1.0",
+  "datacontenttype": "text/plain; charset=utf8",
+  "data": "{\"0\":\"Good morning\",\"1\":{\"data\":{\"translations\":[{\"translatedText\":\"Good morning\",\"detectedSourceLanguage\":\"fr\",\"model\":\"nmt\"}]}},\"origin\":{\"date\":1677094876,\"from\":{\"id\":527645760,\"username\":\"lanceball\",\"bot\":false,\"first_name\":\"Lance\",\"last_name\":\"Ball\",\"is_bot\":false},\"text\":\"Bonjour\",\"chat\":{\"id\":\"527645760\",\"title\":null,\"type\":\"private\",\"all_members_are_administrators\":false},\"photo\":null,\"video\":null,\"audio\":null,\"document\":null,\"sticker\":null,\"entities\":null,\"caption\":null,\"game\":null,\"message_id\":20,\"location\":null,\"caption_entities\":null,\"reply_markup\":null}}",
+  "knativearrivaltime": "2023-02-22T19:41:22.047038383Z"
+}

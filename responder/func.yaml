@@ -1,0 +1,27 @@
+specVersion: 0.35.0
+name: responder
+runtime: node
+registry: quay.io/lanceball
+image: quay.io/lanceball/responder:latest
+imageDigest: sha256:3c4c2a80034eb2bbee395e439e024ff6f69854b81c57a80e49e4ec1780f7f890
+created: 2023-02-22T11:25:12.982152-05:00
+invoke: cloudevent
+build:
+  buildpacks: []
+  builder: pack
+  buildEnvs: []
+run:
+  volumes: []
+  envs:
+  - value: '{{ secret:telegram }}'
+deploy:
+  namespace: default
+  remote: false
+  annotations: {}
+  options: {}
+  labels:
+  - key: app
+    value: responder
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
