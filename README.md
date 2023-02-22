@@ -23,7 +23,7 @@ chat with the translation.
 * A cluster with Knative installed
 * CamelK https://camel.apache.org/camel-k/1.9.x/installation/installation.html installed
 * Google Translation API key in `translate/service-account-file.json`
-* Update the Twitter API credentials in [./resources/twitter-search-source-binding.yaml](resources/twitter-search-source-binding.yaml)
+* Update the Telegram API key in [./resources/telegram-binding-v1.yaml](resources/telegram-binding-v1.yaml)
 
 ## Steps
 * Ensure your Google Translation API key is correctly set in `translate/service-account-file.json`
