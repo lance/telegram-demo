@@ -31,24 +31,17 @@ chat with the translation.
 ```
 kubectl create secret generic telegram --from-literal=API_KEY=<apikey>
 ```
-* Configure the `translate`, `responder` and `viewer` functions with application labels
-```
-func config labels add -p translate
-# Add a label with the key "app" and the value "translate"
-
-func config labels add -p viewer
-# Add a label with the key "app" and the value "viewer"
-```
-
-* Deploy the `translate` and `viewer` functions
-```
-func deploy -p viewer
-func deploy -p translate
-```
 
 * Install a default Knative Broker
 ```
 kn broker create default
+```
+
+* Deploy the functions
+```
+func deploy -p viewer
+func deploy -p translate
+func deploy -p responder
 ```
 
 * Create the Telegram->Translate trigger
@@ -70,6 +63,8 @@ kn trigger create responder-trigger -s responder --filter type=knative.function.
 ```
 kubectl apply -f resources/telegram-binding-v1.yaml
 ```
+
+* Send a Telegram message to your bot channel
 
 * Check the logs
 ```
