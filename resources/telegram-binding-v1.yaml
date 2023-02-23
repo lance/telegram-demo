@@ -9,7 +9,7 @@ spec:
       apiVersion: camel.apache.org/v1alpha1
       name: telegram-source
     properties:
-      authorizationToken: 6177353497:AAH542SrGiSZyZZ6j1iHjoP8FPQ4frK6yxg
+      authorizationToken: API_TOKEN_HERE
   steps:
   - ref:
       apiVersion: camel.apache.org/v1alpha1
